@@ -83,7 +83,10 @@ const About = () => {
                 <p className="text-2xl font-bold text-emerald-600 text-center">
                   All Inclusive Package: USD $3,000
                 </p>
-                <p className="text-sm text-gray-600 text-center mt-2">Per delegate</p>
+                <p className="text-sm text-gray-600 text-center mt-1">Per delegate</p>
+                <p className="text-xs text-orange-600 text-center mt-2 font-semibold">
+                  *GST Extra as applicable
+                </p>
               </div>
             </CardContent>
           </Card>
