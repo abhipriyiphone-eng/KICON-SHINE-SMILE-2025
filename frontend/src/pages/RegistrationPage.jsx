@@ -47,11 +47,40 @@ const RegistrationPage = () => {
     termsAccepted: false
   });
 
+  const [emailChecking, setEmailChecking] = useState(false);
+  const [emailExists, setEmailExists] = useState(false);
+
   const handleInputChange = (field, value) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
     }));
+  };
+
+  const checkEmailExists = async (email) => {
+    if (!email || !email.includes('@')) return;
+    
+    setEmailChecking(true);
+    try {
+      const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+      const response = await fetch(`${BACKEND_URL}/api/registrations/email/${encodeURIComponent(email)}`);
+      const result = await response.json();
+      
+      if (result.success) {
+        setEmailExists(result.exists);
+        if (result.exists) {
+          toast({
+            title: "Email Already Registered",
+            description: "This email is already registered. Please use a different email address.",
+            variant: "destructive"
+          });
+        }
+      }
+    } catch (error) {
+      console.error("Email check error:", error);
+    } finally {
+      setEmailChecking(false);
+    }
   };
 
   const handleInterestChange = (interest, checked) => {
