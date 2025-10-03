@@ -24,10 +24,18 @@ const Footer = () => {
               An exclusive Indo-Korean convention bridging the future of dermatology, 
               dentistry, and aesthetic innovation.
             </p>
-            <div className="flex space-x-2">
-              <span className="text-2xl">🇮🇳</span>
+            <div className="flex items-center space-x-2">
+              <img 
+                src="https://flagcdn.com/w40/in.png" 
+                alt="India Flag" 
+                className="w-6 h-4 rounded-sm shadow-lg"
+              />
               <span className="text-gray-400">×</span>
-              <span className="text-2xl">🇰🇷</span>
+              <img 
+                src="https://flagcdn.com/w40/kr.png" 
+                alt="Korea Flag" 
+                className="w-6 h-4 rounded-sm shadow-lg"
+              />
             </div>
           </div>
 
