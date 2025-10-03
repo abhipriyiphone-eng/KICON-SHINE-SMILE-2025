@@ -337,10 +337,17 @@ const RegistrationPage = () => {
                           type="email"
                           value={formData.email}
                           onChange={(e) => handleInputChange('email', e.target.value)}
+                          onBlur={(e) => checkEmailExists(e.target.value)}
                           placeholder="your.email@example.com"
                           required
-                          className="mt-1"
+                          className={`mt-1 ${emailExists ? 'border-red-500 focus:border-red-500' : ''}`}
                         />
+                        {emailChecking && (
+                          <p className="text-sm text-gray-500 mt-1">Checking email...</p>
+                        )}
+                        {emailExists && (
+                          <p className="text-sm text-red-500 mt-1">This email is already registered</p>
+                        )}
                       </div>
                     </div>
                   </div>
