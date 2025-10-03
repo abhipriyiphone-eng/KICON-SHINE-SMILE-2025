@@ -442,11 +442,16 @@ const RegistrationPage = () => {
                           <span className="text-gray-700">KICON 2025 Registration</span>
                           <span className="font-semibold">USD $3,000</span>
                         </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-700 text-sm">GST (as applicable)</span>
+                          <span className="font-semibold text-sm">Extra</span>
+                        </div>
                         <div className="border-t border-emerald-200 pt-2">
                           <div className="flex justify-between text-lg font-bold text-emerald-800">
-                            <span>Total Amount</span>
+                            <span>Base Amount</span>
                             <span>USD $3,000</span>
                           </div>
+                          <p className="text-xs text-orange-600 mt-1">*GST will be added as per applicable rates</p>
                         </div>
                       </div>
                     </div>
