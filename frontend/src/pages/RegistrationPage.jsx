@@ -63,18 +63,72 @@ const RegistrationPage = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Mock registration submission
-    toast({
-      title: "Registration Successful!",
-      description: "Your registration has been submitted. You will receive a confirmation email shortly.",
-    });
-    
-    setTimeout(() => {
-      navigate("/");
-    }, 2000);
+    try {
+      const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+      
+      // Prepare registration data
+      const registrationData = {
+        fullName: formData.fullName,
+        gender: formData.gender,
+        dateOfBirth: formData.dateOfBirth + "T00:00:00.000Z", // Convert to ISO format
+        nationality: formData.nationality,
+        passportNumber: formData.passportNumber,
+        passportExpiry: formData.passportExpiry + "T00:00:00.000Z", // Convert to ISO format
+        mobile: formData.mobile,
+        email: formData.email,
+        specialty: formData.specialty,
+        yearsOfPractice: parseInt(formData.yearsOfPractice),
+        clinicName: formData.clinicName,
+        clinicAddress: formData.clinicAddress,
+        company: formData.company || "",
+        designation: formData.designation,
+        interests: formData.interests,
+        mou: formData.mou,
+        foodPreference: formData.foodPreference,
+        emergencyContact: formData.emergencyContact,
+        allergies: formData.allergies || "",
+        specialAssistance: formData.specialAssistance,
+        termsAccepted: formData.termsAccepted
+      };
+
+      // Submit registration
+      const response = await fetch(`${BACKEND_URL}/api/registrations`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(registrationData)
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Registration Successful!",
+          description: result.message,
+        });
+        
+        setTimeout(() => {
+          navigate("/");
+        }, 2000);
+      } else {
+        toast({
+          title: "Registration Failed",
+          description: result.error?.message || "An error occurred during registration. Please try again.",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
+      console.error("Registration error:", error);
+      toast({
+        title: "Registration Failed",
+        description: "Network error. Please check your connection and try again.",
+        variant: "destructive"
+      });
+    }
   };
 
   const nextStep = () => {
