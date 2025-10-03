@@ -69,12 +69,17 @@ const Schedule = () => {
               <div className="absolute inset-0 bg-black/20"></div>
               <div className="relative z-10">
                 <MapPin className="h-12 w-12 text-emerald-400 mx-auto mb-6" />
-                <h3 className="text-3xl font-bold mb-4">Inspire Entertainment Resort</h3>
-                <p className="text-xl text-gray-200 mb-2">Incheon, South Korea</p>
-                <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                  A luxurious, premier wellness and hospitality destination offering world-class 
-                  amenities and the perfect backdrop for our prestigious medical convention.
-                </p>
+                <h3 className="text-3xl font-bold mb-4">Luxury Accommodation</h3>
+                <p className="text-xl text-gray-200 mb-4">Incheon, South Korea</p>
+                <div className="text-gray-300 max-w-3xl mx-auto leading-relaxed space-y-2">
+                  <p className="font-semibold text-emerald-300">
+                    Paradise Hotel & Resort, Inspire Entertainment Resort, or Same Class
+                  </p>
+                  <p>
+                    Luxurious, premier wellness and hospitality destinations offering world-class 
+                    amenities and the perfect backdrop for our prestigious medical convention.
+                  </p>
+                </div>
               </div>
             </CardContent>
           </Card>
