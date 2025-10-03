@@ -1,6 +1,7 @@
 from fastapi import FastAPI, APIRouter
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
+import os
 import logging
 from pathlib import Path
 from pydantic import BaseModel, Field
