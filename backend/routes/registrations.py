@@ -14,7 +14,7 @@ from models.Registration import (
 )
 
 # Get database connection
-from server import db
+from database import db
 
 router = APIRouter(prefix="/registrations", tags=["registrations"])
 logger = logging.getLogger(__name__)
