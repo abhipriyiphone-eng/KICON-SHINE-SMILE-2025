@@ -39,12 +39,14 @@ export const scheduleData = [
 ];
 
 export const galleryImages = [
-  "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-  "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-  "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-  "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-  "https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-  "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+  "https://images.unsplash.com/photo-1643916800611-1302e8d27c38?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxkZW50aXN0cnklMjBlcXVpcG1lbnR8ZW58MHx8fHwxNzU5NDg3Mzc4fDA&ixlib=rb-4.1.0&q=85",
+  "https://images.unsplash.com/photo-1758205307891-fa9abee1704a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHw0fHxkZW50aXN0cnklMjBlcXVpcG1lbnR8ZW58MHx8fHwxNzU5NDg3Mzc4fDA&ixlib=rb-4.1.0&q=85",
+  "https://images.unsplash.com/photo-1710839214353-49077cb9098f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwzfHxza2luY2FyZSUyMGRldmljZXN8ZW58MHx8fHwxNzU5NDg3MzgzfDA&ixlib=rb-4.1.0&q=85",
+  "https://images.unsplash.com/photo-1720424643394-cf605de24655?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHw0fHxza2luY2FyZSUyMGRldmljZXN8ZW58MHx8fHwxNzU5NDg3MzgzfDA&ixlib=rb-4.1.0&q=85",
+  "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxtZWRpY2FsfGVufDB8fHx8MTc1OTQ4NzM4N3ww&ixlib=rb-4.1.0&q=85",
+  "https://images.unsplash.com/photo-1638202993928-7267aad84c31?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwzfHxtZWRpY2FsfGVufDB8fHx8MTc1OTQ4NzM4N3ww&ixlib=rb-4.1.0&q=85",
+  "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHw0fHxtZWRpY2FsfGVufDB8fHx8MTc1OTQ4NzM4N3ww&ixlib=rb-4.1.0&q=85",
+  "https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg"
 ];
 
 export const contactInfo = {
