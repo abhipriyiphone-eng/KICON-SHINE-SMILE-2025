@@ -18,13 +18,21 @@ const Hero = () => {
         <div className="text-center mb-12">
           {/* Flags */}
           <div className="flex items-center justify-center space-x-8 mb-8">
-            <div className="flex items-center space-x-2">
-              <span className="text-4xl">🇮🇳</span>
+            <div className="flex items-center space-x-3">
+              <img 
+                src="https://flagcdn.com/w40/in.png" 
+                alt="India Flag" 
+                className="w-8 h-6 rounded-sm shadow-lg"
+              />
               <span className="text-white font-semibold">India</span>
             </div>
             <div className="w-12 h-0.5 bg-white/50"></div>
-            <div className="flex items-center space-x-2">
-              <span className="text-4xl">🇰🇷</span>
+            <div className="flex items-center space-x-3">
+              <img 
+                src="https://flagcdn.com/w40/kr.png" 
+                alt="Korea Flag" 
+                className="w-8 h-6 rounded-sm shadow-lg"
+              />
               <span className="text-white font-semibold">Korea</span>
             </div>
           </div>
