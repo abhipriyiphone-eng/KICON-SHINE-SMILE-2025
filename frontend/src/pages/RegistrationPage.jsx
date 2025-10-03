@@ -605,10 +605,10 @@ const RegistrationPage = () => {
                     ) : (
                       <Button
                         type="submit"
-                        disabled={!formData.termsAccepted}
+                        disabled={!formData.termsAccepted || emailExists || emailChecking}
                         className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 px-8"
                       >
-                        Complete Registration
+                        {emailChecking ? "Checking Email..." : "Complete Registration"}
                       </Button>
                     )}
                   </div>
