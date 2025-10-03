@@ -12,7 +12,7 @@ from models.Contact import (
 )
 
 # Get database connection
-from server import db
+from database import db
 
 router = APIRouter(prefix="/contacts", tags=["contacts"])
 logger = logging.getLogger(__name__)
