@@ -37,8 +37,8 @@ const Gallery = () => {
             Experience Korea's Beauty
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Get a glimpse of the stunning venues, cultural experiences, and networking 
-            opportunities that await you at KICON 2025.
+            Explore the world of advanced dental equipment, cutting-edge skincare devices, 
+            and professional medical environments at KICON 2025 Indo-Korean medical convention.
           </p>
         </div>
 
