@@ -51,7 +51,10 @@ export const galleryImages = [
   "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/gjhi3qcj_12.png",
   "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/hk59ucf0_13.png",
   "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/ousq7oic_15.jpg",
-  "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/b8m9u2xc_16.avif"
+  "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/b8m9u2xc_16.avif",
+  "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/w02uxl54_9.png",
+  "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/rr5gltoq_10.png",
+  "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/wqwbef4q_17.png"
 ];
 
 export const contactInfo = {
