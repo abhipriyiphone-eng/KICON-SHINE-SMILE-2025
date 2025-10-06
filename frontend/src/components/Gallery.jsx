@@ -178,9 +178,11 @@ const Gallery = () => {
             <p className="text-xl text-gray-600 mb-8">
               Join us for an unforgettable journey of learning, networking, and cultural immersion
             </p>
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
-              Register for KICON 2025
-            </button>
+            <Link to="/register">
+              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                Register for KICON 2025
+              </button>
+            </Link>
           </div>
         </div>
       </div>
