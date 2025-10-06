@@ -22,9 +22,16 @@ const Gallery = () => {
         }
       } catch (error) {
         console.error("Error fetching gallery images:", error);
-        // Fallback to mock data if API fails
+        // Fallback to new medical images if API fails
         setGalleryImages([
-          "https://images.unsplash.com/photo-1643916800611-1302e8d27c38?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxkZW50aXN0cnklMjBlcXVpcG1lbnR8ZW58MHx8fHwxNzU5NDg3Mzc4fDA&ixlib=rb-4.1.0&q=85"
+          "https://images.pexels.com/photos/7772643/pexels-photo-7772643.jpeg",
+          "https://images.pexels.com/photos/5788489/pexels-photo-5788489.jpeg",
+          "https://images.unsplash.com/photo-1740592754365-2117f5977528",
+          "https://images.unsplash.com/photo-1657244358898-d9e110504fd8",
+          "https://images.pexels.com/photos/6502306/pexels-photo-6502306.jpeg",
+          "https://images.pexels.com/photos/6502305/pexels-photo-6502305.jpeg",
+          "https://images.unsplash.com/photo-1704297004668-502f3bfdb429",
+          "https://images.pexels.com/photos/9973859/pexels-photo-9973859.jpeg"
         ]);
       } finally {
         setLoading(false);
