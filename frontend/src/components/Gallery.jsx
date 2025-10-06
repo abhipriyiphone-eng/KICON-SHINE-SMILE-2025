@@ -40,10 +40,6 @@ const Gallery = () => {
 
     fetchGalleryImages();
   }, []);
-  const [galleryImages, setGalleryImages] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
     const fetchGalleryImages = async () => {
       try {
         const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
