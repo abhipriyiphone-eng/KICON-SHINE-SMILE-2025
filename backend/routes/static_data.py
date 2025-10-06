@@ -184,6 +184,24 @@ async def get_gallery_images():
                 "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/b8m9u2xc_16.avif",
                 "title": "Advanced Aesthetic Treatment",
                 "description": "Cutting-edge Korean aesthetic technology for comprehensive facial and body treatments"
+            },
+            {
+                "id": 14,
+                "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/w02uxl54_9.png",
+                "title": "S.M.P Design and Theory System",
+                "description": "KC certified S.M.P pigment technology from Signature Lab Korea for scalp micropigmentation"
+            },
+            {
+                "id": 15,
+                "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/rr5gltoq_10.png",
+                "title": "UPCELLA Beauty Equipment",
+                "description": "Refreshing light body therapy with thermal, suction, and E-therapy - new wave of beauty equipment"
+            },
+            {
+                "id": 16,
+                "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/wqwbef4q_17.png",
+                "title": "HyalDew Dermal Filler System",
+                "description": "Professional hyaluronic acid dermal fillers with precision facial mapping for comprehensive aesthetic treatments"
             }
         ]
         
