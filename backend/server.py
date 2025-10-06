@@ -13,7 +13,7 @@ from datetime import datetime
 from database import db
 
 # Import route modules
-from routes import registrations, contacts, static_data, payments
+from routes import registrations, contacts, static_data, payments, brochure
 
 # Create the main app without a prefix
 app = FastAPI(
