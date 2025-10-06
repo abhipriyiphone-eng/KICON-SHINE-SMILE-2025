@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Sparkles, Globe, HandHeart, Award } from "lucide-react";
+import { Link } from "react-router-dom";
 import { packageInclusions, packageExclusions } from "../mock/mockData";
 
 const About = () => {
