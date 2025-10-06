@@ -55,6 +55,7 @@ async def get_status_checks():
 api_router.include_router(registrations.router)
 api_router.include_router(contacts.router)
 api_router.include_router(static_data.router)
+api_router.include_router(payments.router)
 
 # Include the main router in the app
 app.include_router(api_router)
