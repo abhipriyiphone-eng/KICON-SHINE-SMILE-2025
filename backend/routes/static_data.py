@@ -136,6 +136,24 @@ async def get_gallery_images():
                 "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/nq4sasfb_5.png",
                 "title": "Vita Zet Dermal Absorption",
                 "description": "Non-invasive dermal drug absorption system - No needle, no pain, no steroid technology"
+            },
+            {
+                "id": 6,
+                "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/xfkrzle3_6.png",
+                "title": "E-SLIM+ Therapy System",
+                "description": "E-therapy and EMS combine for detoxification using Bangjia organic bristles and multi-handpieces"
+            },
+            {
+                "id": 7,
+                "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/y8d9ykz6_7.png",
+                "title": "SKINPRO MAX Beauty Equipment",
+                "description": "Essential aesthetic item - the crystal of comprehensive beauty equipment for irreplaceable skin care"
+            },
+            {
+                "id": 8,
+                "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/gval6jrf_8.png",
+                "title": "PLADOS Aesthetic Device",
+                "description": "Confidence growing from within - the FACE you have dreamed of with advanced aesthetic technology"
             }
         ]
         
