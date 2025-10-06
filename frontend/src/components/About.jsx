@@ -128,10 +128,23 @@ const About = () => {
               Secure your spot at this exclusive Indo-Korean medical convention
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-emerald-50 transition-colors duration-200">
-                Register Now
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors duration-200">
+              <Link to="/register">
+                <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-emerald-50 transition-colors duration-200">
+                  Register Now
+                </button>
+              </Link>
+              <button 
+                onClick={() => {
+                  // Create a download link for the brochure
+                  const link = document.createElement('a');
+                  link.href = '/KICON_2025_Details.pdf';
+                  link.download = 'KICON_2025_Details.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors duration-200"
+              >
                 Download Details
               </button>
             </div>
