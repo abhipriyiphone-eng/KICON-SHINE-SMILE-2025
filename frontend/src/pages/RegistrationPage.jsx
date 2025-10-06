@@ -637,6 +637,14 @@ const RegistrationPage = () => {
           </form>
         </div>
       </div>
+      
+      {/* Payment Details Modal */}
+      {showPaymentDetails && registrationId && (
+        <PaymentDetails 
+          registrationId={registrationId}
+          onClose={handlePaymentClose}
+        />
+      )}
     </div>
   );
 };
