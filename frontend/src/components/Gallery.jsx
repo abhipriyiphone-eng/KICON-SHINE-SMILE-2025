@@ -24,6 +24,33 @@ const Gallery = () => {
         console.error("Error fetching gallery images:", error);
         // Fallback to mock data if API fails
         setGalleryImages([
+          "https://images.unsplash.com/photo-1643916800611-1302e8d27c38?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxkZW50aXN0cnklMjBlcXVpcG1lbnR8ZW58MHx8fHwxNzU5NDg3Mzc4fDA&ixlib=rb-4.1.0&q=85"
+        ]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchGalleryImages();
+  }, []);
+  const [galleryImages, setGalleryImages] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchGalleryImages = async () => {
+      try {
+        const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+        const response = await fetch(`${BACKEND_URL}/api/static/gallery`);
+        const result = await response.json();
+        
+        if (result.success) {
+          const imageUrls = result.data.map(item => item.url);
+          setGalleryImages(imageUrls);
+        }
+      } catch (error) {
+        console.error("Error fetching gallery images:", error);
+        // Fallback to mock data if API fails
+        setGalleryImages([
           "https://images.unsplash.com/photo-1643916800611-1302e8d27c38?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxkZW50aXN0cnklMjBlcXVpcG1lbnR8ZW58MHx8fHwxNzU5NDg3Mzc4fDA&ixlib=rb-4.1.0&q=85",
           "https://images.unsplash.com/photo-1758205307891-fa9abee1704a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHw0fHxkZW50aXN0cnklMjBlcXVpcG1lbnR8ZW58MHx8fHwxNzU5NDg3Mzc4fDA&ixlib=rb-4.1.0&q=85"
         ]);
