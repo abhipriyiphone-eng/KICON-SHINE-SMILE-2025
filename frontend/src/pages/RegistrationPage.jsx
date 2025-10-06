@@ -11,6 +11,7 @@ import { ArrowLeft, CheckCircle, User, Building, Globe, CreditCard } from "lucid
 import { Link, useNavigate } from "react-router-dom";
 import { registrationFormData } from "../mock/mockData";
 import { useToast } from "../hooks/use-toast";
+import PaymentDetails from "../components/PaymentDetails";
 
 const RegistrationPage = () => {
   const navigate = useNavigate();
