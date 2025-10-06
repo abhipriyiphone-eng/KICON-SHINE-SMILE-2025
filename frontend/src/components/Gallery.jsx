@@ -31,7 +31,12 @@ const Gallery = () => {
           "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/nq4sasfb_5.png",
           "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/xfkrzle3_6.png",
           "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/y8d9ykz6_7.png",
-          "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/gval6jrf_8.png"
+          "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/gval6jrf_8.png",
+          "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/9tygukcs_11.png",
+          "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/gjhi3qcj_12.png",
+          "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/hk59ucf0_13.png",
+          "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/ousq7oic_15.jpg",
+          "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/b8m9u2xc_16.avif"
         ]);
       } finally {
         setLoading(false);
