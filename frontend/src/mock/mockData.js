@@ -39,14 +39,11 @@ export const scheduleData = [
 ];
 
 export const galleryImages = [
-  "https://images.pexels.com/photos/7772643/pexels-photo-7772643.jpeg",
-  "https://images.pexels.com/photos/5788489/pexels-photo-5788489.jpeg",
-  "https://images.unsplash.com/photo-1740592754365-2117f5977528",
-  "https://images.unsplash.com/photo-1657244358898-d9e110504fd8",
-  "https://images.pexels.com/photos/6502306/pexels-photo-6502306.jpeg",
-  "https://images.pexels.com/photos/6502305/pexels-photo-6502305.jpeg",
-  "https://images.unsplash.com/photo-1704297004668-502f3bfdb429",
-  "https://images.pexels.com/photos/9973859/pexels-photo-9973859.jpeg"
+  "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/4172tad4_1.png",
+  "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/huaffgtt_2.png",
+  "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/3ik974zx_3.png",
+  "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/a4f0i3we_4.png",
+  "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/nq4sasfb_5.png"
 ];
 
 export const contactInfo = {
