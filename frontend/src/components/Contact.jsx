@@ -134,10 +134,15 @@ const Contact = () => {
               Contact our team today or proceed with online registration
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-emerald-50 transition-colors duration-200">
-                Start Registration
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors duration-200">
+              <Link to="/register">
+                <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-emerald-50 transition-colors duration-200">
+                  Start Registration
+                </button>
+              </Link>
+              <button 
+                onClick={() => window.open('tel:+91-9810571665', '_self')}
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors duration-200"
+              >
                 Call Now
               </button>
             </div>
