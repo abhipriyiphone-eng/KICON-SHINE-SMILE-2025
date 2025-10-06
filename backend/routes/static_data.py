@@ -109,51 +109,33 @@ async def get_gallery_images():
         gallery_images = [
             {
                 "id": 1,
-                "url": "https://images.pexels.com/photos/7772643/pexels-photo-7772643.jpeg",
-                "title": "Korean Aesthetic Machine",
-                "description": "Advanced Korean cosmetic and aesthetic treatment device"
+                "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/4172tad4_1.png",
+                "title": "V Max HIFU System",
+                "description": "Dual handpieces with stable cooling system and non-consumable operation for pain-free treatment"
             },
             {
                 "id": 2,
-                "url": "https://images.pexels.com/photos/5788489/pexels-photo-5788489.jpeg",
-                "title": "Aesthetic Threads",
-                "description": "Professional PDO threads for aesthetic lifting procedures"
+                "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/huaffgtt_2.png",
+                "title": "High-Frequency Aesthetic Technology",
+                "description": "MEDITEC's unrivalled technological prowess in high-frequency treatments"
             },
             {
                 "id": 3,
-                "url": "https://images.unsplash.com/photo-1740592754365-2117f5977528",
-                "title": "NMN Supplements",
-                "description": "Nicotinamide Mononucleotide anti-aging supplements"
+                "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/3ik974zx_3.png",
+                "title": "Magic Line System",
+                "description": "Bipolar high frequency + thermal suction + color therapy for comprehensive treatment"
             },
             {
                 "id": 4,
-                "url": "https://images.unsplash.com/photo-1657244358898-d9e110504fd8",
-                "title": "NAD+ Molecular Structure",
-                "description": "Nicotinamide Adenine Dinucleotide molecular visualization"
+                "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/a4f0i3we_4.png",
+                "title": "Vita Zet Face & Body Care",
+                "description": "Needle-free injector minimizing pain with solenoid method for full face and body care"
             },
             {
                 "id": 5,
-                "url": "https://images.pexels.com/photos/6502306/pexels-photo-6502306.jpeg",
-                "title": "Korean Dental Implant",
-                "description": "High-quality Korean titanium dental implant technology"
-            },
-            {
-                "id": 6,
-                "url": "https://images.pexels.com/photos/6502305/pexels-photo-6502305.jpeg",
-                "title": "Dental Implant System",
-                "description": "Advanced Korean dental implant and crown system"
-            },
-            {
-                "id": 7,
-                "url": "https://images.unsplash.com/photo-1704297004668-502f3bfdb429",
-                "title": "Anti-Wrinkle Serum",
-                "description": "Premium cosmetic serums and anti-aging products"
-            },
-            {
-                "id": 8,
-                "url": "https://images.pexels.com/photos/9973859/pexels-photo-9973859.jpeg",
-                "title": "Hi-Tech Aesthetic Device",
-                "description": "Korean advanced aesthetic treatment technology"
+                "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/nq4sasfb_5.png",
+                "title": "Vita Zet Dermal Absorption",
+                "description": "Non-invasive dermal drug absorption system - No needle, no pain, no steroid technology"
             }
         ]
         
