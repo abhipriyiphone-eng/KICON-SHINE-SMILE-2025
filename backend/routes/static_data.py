@@ -109,51 +109,51 @@ async def get_gallery_images():
         gallery_images = [
             {
                 "id": 1,
-                "url": "https://images.unsplash.com/photo-1643916800611-1302e8d27c38?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxkZW50aXN0cnklMjBlcXVpcG1lbnR8ZW58MHx8fHwxNzU5NDg3Mzc4fDA&ixlib=rb-4.1.0&q=85",
-                "title": "Modern Dental Equipment",
-                "description": "State-of-the-art dental chair and equipment setup"
+                "url": "https://images.pexels.com/photos/7772643/pexels-photo-7772643.jpeg",
+                "title": "Korean Aesthetic Machine",
+                "description": "Advanced Korean cosmetic and aesthetic treatment device"
             },
             {
                 "id": 2,
-                "url": "https://images.unsplash.com/photo-1758205307891-fa9abee1704a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHw0fHxkZW50aXN0cnklMjBlcXVpcG1lbnR8ZW58MHx8fHwxNzU5NDg3Mzc4fDA&ixlib=rb-4.1.0&q=85",
-                "title": "Dental Professionals at Work",
-                "description": "Professional dental examination in progress"
+                "url": "https://images.pexels.com/photos/5788489/pexels-photo-5788489.jpeg",
+                "title": "Aesthetic Threads",
+                "description": "Professional PDO threads for aesthetic lifting procedures"
             },
             {
                 "id": 3,
-                "url": "https://images.unsplash.com/photo-1710839214353-49077cb9098f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwzfHxza2luY2FyZSUyMGRldmljZXN8ZW58MHx8fHwxNzU5NDg3MzgzfDA&ixlib=rb-4.1.0&q=85",
-                "title": "Advanced Skincare Technology",
-                "description": "Professional skincare device in use"
+                "url": "https://images.unsplash.com/photo-1740592754365-2117f5977528",
+                "title": "NMN Supplements",
+                "description": "Nicotinamide Mononucleotide anti-aging supplements"
             },
             {
                 "id": 4,
-                "url": "https://images.unsplash.com/photo-1720424643394-cf605de24655?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHw0fHxza2luY2FyZSUyMGRldmljZXN8ZW58MHx8fHwxNzU5NDg3MzgzfDA&ixlib=rb-4.1.0&q=85",
-                "title": "Light Therapy Treatment",
-                "description": "Advanced light therapy technology for skincare"
+                "url": "https://images.unsplash.com/photo-1657244358898-d9e110504fd8",
+                "title": "NAD+ Molecular Structure",
+                "description": "Nicotinamide Adenine Dinucleotide molecular visualization"
             },
             {
                 "id": 5,
-                "url": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxtZWRpY2FsfGVufDB8fHx8MTc1OTQ4NzM4N3ww&ixlib=rb-4.1.0&q=85",
-                "title": "Medical Technology Integration",
-                "description": "Modern medical professional with technology"
+                "url": "https://images.pexels.com/photos/6502306/pexels-photo-6502306.jpeg",
+                "title": "Korean Dental Implant",
+                "description": "High-quality Korean titanium dental implant technology"
             },
             {
                 "id": 6,
-                "url": "https://images.unsplash.com/photo-1638202993928-7267aad84c31?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwzfHxtZWRpY2FsfGVufDB8fHx8MTc1OTQ4NzM4N3ww&ixlib=rb-4.1.0&q=85",
-                "title": "Healthcare Professional",
-                "description": "Professional medical environment"
+                "url": "https://images.pexels.com/photos/6502305/pexels-photo-6502305.jpeg",
+                "title": "Dental Implant System",
+                "description": "Advanced Korean dental implant and crown system"
             },
             {
                 "id": 7,
-                "url": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHw0fHxtZWRpY2FsfGVufDB8fHx8MTc1OTQ4NzM4N3ww&ixlib=rb-4.1.0&q=85",
-                "title": "Laboratory Equipment",
-                "description": "Advanced medical laboratory setup"
+                "url": "https://images.unsplash.com/photo-1704297004668-502f3bfdb429",
+                "title": "Anti-Wrinkle Serum",
+                "description": "Premium cosmetic serums and anti-aging products"
             },
             {
                 "id": 8,
-                "url": "https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg",
-                "title": "Medical Consultation",
-                "description": "Professional medical consultation environment"
+                "url": "https://images.pexels.com/photos/9973859/pexels-photo-9973859.jpeg",
+                "title": "Hi-Tech Aesthetic Device",
+                "description": "Korean advanced aesthetic treatment technology"
             }
         ]
         
