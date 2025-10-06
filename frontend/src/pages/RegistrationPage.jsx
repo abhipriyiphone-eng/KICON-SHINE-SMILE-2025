@@ -99,6 +99,10 @@ const RegistrationPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
+    if (submitting) return;
+    
+    setSubmitting(true);
+    
     try {
       const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
       
@@ -139,14 +143,13 @@ const RegistrationPage = () => {
       const result = await response.json();
 
       if (result.success) {
+        setRegistrationId(result.data.id);
+        setShowPaymentDetails(true);
+        
         toast({
           title: "Registration Successful!",
-          description: result.message,
+          description: "Please complete the payment to confirm your registration.",
         });
-        
-        setTimeout(() => {
-          navigate("/");
-        }, 2000);
       } else {
         toast({
           title: "Registration Failed",
@@ -161,7 +164,14 @@ const RegistrationPage = () => {
         description: "Network error. Please check your connection and try again.",
         variant: "destructive"
       });
+    } finally {
+      setSubmitting(false);
     }
+  };
+
+  const handlePaymentClose = () => {
+    setShowPaymentDetails(false);
+    navigate("/");
   };
 
   const nextStep = () => {
