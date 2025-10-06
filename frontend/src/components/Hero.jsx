@@ -91,14 +91,21 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="lg"
-              onClick={() => {
-                // Create a download link for the brochure
-                const link = document.createElement('a');
-                link.href = '/KICON_2025_Brochure.pdf'; // You can replace with actual brochure URL
-                link.download = 'KICON_2025_Brochure.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
+              onClick={async () => {
+                try {
+                  const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+                  const link = document.createElement('a');
+                  link.href = `${BACKEND_URL}/api/brochure/download`;
+                  link.download = 'KICON_2025_Brochure.html';
+                  link.target = '_blank';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                } catch (error) {
+                  console.error('Error downloading brochure:', error);
+                  // Fallback to view in new tab
+                  window.open(`${process.env.REACT_APP_BACKEND_URL}/api/brochure/view`, '_blank');
+                }
               }}
               className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg backdrop-blur-sm"
             >
