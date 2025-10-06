@@ -50,6 +50,9 @@ const RegistrationPage = () => {
 
   const [emailChecking, setEmailChecking] = useState(false);
   const [emailExists, setEmailExists] = useState(false);
+  const [showPaymentDetails, setShowPaymentDetails] = useState(false);
+  const [registrationId, setRegistrationId] = useState(null);
+  const [submitting, setSubmitting] = useState(false);
 
   const handleInputChange = (field, value) => {
     setFormData(prev => ({
