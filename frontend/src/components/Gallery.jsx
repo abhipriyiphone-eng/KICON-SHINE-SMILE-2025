@@ -137,6 +137,14 @@ const Gallery = () => {
             </Card>
           ))}
         </div>
+        )}
+
+        {/* Empty State */}
+        {!loading && galleryImages.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-gray-600">No gallery images available.</p>
+          </div>
+        )}
 
         {/* Modal */}
         {selectedImage && (
