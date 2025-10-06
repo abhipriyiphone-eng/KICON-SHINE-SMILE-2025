@@ -154,6 +154,36 @@ async def get_gallery_images():
                 "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/gval6jrf_8.png",
                 "title": "PLADOS Aesthetic Device",
                 "description": "Confidence growing from within - the FACE you have dreamed of with advanced aesthetic technology"
+            },
+            {
+                "id": 9,
+                "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/9tygukcs_11.png",
+                "title": "Arcsonic Ultrasound System",
+                "description": "High-powered ultrasound for confident, unrivaled before-and-after experience in trouble care"
+            },
+            {
+                "id": 10,
+                "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/gjhi3qcj_12.png",
+                "title": "Anti-Aging Scalp Care System",
+                "description": "Comprehensive scalp treatment with shampoo bar, hair & skin ampoules, and eco-friendly disinfectant"
+            },
+            {
+                "id": 11,
+                "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/hk59ucf0_13.png",
+                "title": "Advanced Hair Restoration Therapy",
+                "description": "Professional hair transplant and scalp treatment procedures for comprehensive hair care solutions"
+            },
+            {
+                "id": 12,
+                "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/ousq7oic_15.jpg",
+                "title": "PDO Thread Lift Technology",
+                "description": "Professional PDO threads for facial contouring and aesthetic lifting procedures with precise application"
+            },
+            {
+                "id": 13,
+                "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/b8m9u2xc_16.avif",
+                "title": "Advanced Aesthetic Treatment",
+                "description": "Cutting-edge Korean aesthetic technology for comprehensive facial and body treatments"
             }
         ]
         
