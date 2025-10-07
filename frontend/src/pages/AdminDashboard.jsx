@@ -170,6 +170,20 @@ const AdminDashboard = () => {
     }
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("adminLoggedIn");
+    setIsLoggedIn(false);
+    toast({
+      title: "Logged Out",
+      description: "You have been logged out successfully"
+    });
+  };
+
+  // Show login screen if not authenticated
+  if (!isLoggedIn) {
+    return <AdminLogin onLogin={setIsLoggedIn} />;
+  }
+
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
