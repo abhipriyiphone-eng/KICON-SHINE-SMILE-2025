@@ -384,6 +384,37 @@ class KICONAPITester:
         except Exception as e:
             self.log_result('static_api', 'Get gallery images', False, str(e))
 
+    def test_gallery_new_image(self):
+        """Test that new gallery image (id: 18, Advanced Dental Chair System) is present"""
+        try:
+            response = requests.get(f"{self.base_url}/static/gallery")
+            
+            if response.status_code == 200:
+                result = response.json()
+                if result.get('success') and result.get('data'):
+                    data = result['data']
+                    
+                    # Check total count (should be 18 images)
+                    if len(data) >= 18:
+                        # Look for the specific new image (id: 18)
+                        image_18 = next((img for img in data if img.get('id') == 18), None)
+                        
+                        if image_18:
+                            if image_18.get('title') == "Advanced Dental Chair System":
+                                self.log_result('static_api', 'New gallery image (id: 18) verification', True)
+                            else:
+                                self.log_result('static_api', 'New gallery image (id: 18) verification', False, f"Wrong title: {image_18.get('title')}")
+                        else:
+                            self.log_result('static_api', 'New gallery image (id: 18) verification', False, "Image with id 18 not found")
+                    else:
+                        self.log_result('static_api', 'New gallery image (id: 18) verification', False, f"Expected 18+ images, got {len(data)}")
+                else:
+                    self.log_result('static_api', 'New gallery image (id: 18) verification', False, f"Invalid response structure: {result}")
+            else:
+                self.log_result('static_api', 'New gallery image (id: 18) verification', False, f"HTTP {response.status_code}: {response.text}")
+        except Exception as e:
+            self.log_result('static_api', 'New gallery image (id: 18) verification', False, str(e))
+
     def test_static_package_info(self):
         """Test get package information endpoint"""
         try:
