@@ -149,6 +149,33 @@ backend:
       - working: true
         agent: "testing"
         comment: "All 4 static data API tests passed: ✅ Event schedule endpoint ✅ Gallery images endpoint ✅ Package information endpoint ✅ Contact information endpoint. All endpoints return properly structured data with success flags and appropriate content for KICON 2025 event details."
+      - working: true
+        agent: "testing"
+        comment: "✅ GALLERY UPDATE VERIFIED: New image (id: 18, Advanced Dental Chair System) successfully added to gallery endpoint. Total images now: 18. Gallery API returning all images with correct structure and titles."
+
+  - task: "Payment API endpoints"
+    implemented: true
+    working: true
+    file: "routes/payments.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ PAYMENT APIs WORKING: Bank details endpoint (/api/payments/bank-details) returning complete payment information including bank account details (HDFC BANK, Account: 50200073668320), payment calculations (USD $3000 = Rs. 2,70,000 + 5% GST = Rs. 2,83,500), and payment instructions. Payment info endpoint (/api/payments/info/{registration_id}) working correctly for retrieving payment details by registration ID."
+
+  - task: "Registration to Payment Backend Flow"
+    implemented: true
+    working: true
+    file: "routes/registrations.py, routes/payments.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ COMPLETE BACKEND FLOW VERIFIED: Registration → Payment flow working perfectly. 1) POST /api/registrations creates registration and returns proper UUID registration ID. 2) GET /api/payments/info/{registration_id} successfully retrieves payment information using the registration ID. 3) GET /api/payments/bank-details provides complete bank details for payment. All endpoints responding correctly with proper data structures. Backend ready for frontend integration."
 
 frontend:
   - task: "Landing page with modern design"
