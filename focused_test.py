@@ -142,7 +142,7 @@ class FocusedTester:
                 "clinicAddress": "456 Dental Avenue, Mumbai, India",
                 "company": "Johnson Healthcare Ltd",
                 "designation": "Chief Dentist",
-                "interests": ["Dental Implants", "Orthodontics"],
+                "interests": ["Dental Equipment", "Skincare Devices"],
                 "mou": True,
                 "foodPreference": "non-vegetarian",
                 "emergencyContact": "+919876543214",
