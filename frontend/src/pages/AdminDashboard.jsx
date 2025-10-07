@@ -41,8 +41,10 @@ const AdminDashboard = () => {
   }, []);
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    if (isLoggedIn) {
+      fetchData();
+    }
+  }, [isLoggedIn]);
 
   const fetchData = async () => {
     setLoading(true);
