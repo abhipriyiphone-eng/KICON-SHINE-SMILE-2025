@@ -557,8 +557,15 @@ class KICONAPITester:
         print("-" * 40)
         self.test_static_schedule()
         self.test_static_gallery()
+        self.test_gallery_new_image()
         self.test_static_package_info()
         self.test_static_contact_info()
+        
+        # Payment API Tests (High Priority)
+        print("\n💳 PAYMENT API TESTS (High Priority)")
+        print("-" * 40)
+        self.test_payment_bank_details()
+        self.test_registration_to_payment_flow()
         
         # Print Summary
         self.print_summary()
