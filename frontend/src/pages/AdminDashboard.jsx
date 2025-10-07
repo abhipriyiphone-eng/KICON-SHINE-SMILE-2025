@@ -213,6 +213,10 @@ const AdminDashboard = () => {
               <Link to="/">
                 <Button variant="outline" size="sm">Back to Website</Button>
               </Link>
+              <Button onClick={handleLogout} variant="outline" size="sm">
+                <LogOut className="h-4 w-4 mr-2" />
+                Logout
+              </Button>
             </div>
           </div>
         </div>
