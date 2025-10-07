@@ -174,6 +174,21 @@ frontend:
       - working: "unknown"
         agent: "main"
         comment: "4-step registration form integrated with backend API, includes email validation and real-time checking"
+      - working: "unknown"
+        agent: "main"
+        comment: "Registration form appears to be working. PaymentDetails component should display after successful registration submission. Need to test full registration-to-payment flow."
+
+  - task: "Registration to Payment Flow"
+    implemented: true
+    working: "unknown"
+    file: "pages/RegistrationPage.jsx, components/PaymentDetails.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "unknown"
+        agent: "main"
+        comment: "User reported issue: 'after registration when we submit the form its not leading to the payment page'. Backend registration API was fixed (datetime error). PaymentDetails component exists and should show after registration. Need to test complete flow."
 
   - task: "Gallery with medical images"
     implemented: true
