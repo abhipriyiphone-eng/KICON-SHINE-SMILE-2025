@@ -202,6 +202,12 @@ async def get_gallery_images():
                 "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/wqwbef4q_17.png",
                 "title": "HyalDew Dermal Filler System",
                 "description": "Professional hyaluronic acid dermal fillers with precision facial mapping for comprehensive aesthetic treatments"
+            },
+            {
+                "id": 17,
+                "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/nz1es3wp_korean-implant.jpg",
+                "title": "Korean Dental Implant Technology",
+                "description": "Advanced Korean dental implant system with precision engineering for superior osseointegration and long-term stability"
             }
         ]
         
