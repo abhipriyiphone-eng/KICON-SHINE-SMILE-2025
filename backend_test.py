@@ -458,6 +458,75 @@ class KICONAPITester:
         except Exception as e:
             self.log_result('static_api', 'Get contact information', False, str(e))
 
+    # Payment API Tests
+    def test_payment_bank_details(self):
+        """Test get bank details endpoint for payment"""
+        try:
+            response = requests.get(f"{self.base_url}/payments/bank-details")
+            
+            if response.status_code == 200:
+                result = response.json()
+                if result.get('success') and result.get('data'):
+                    data = result['data']
+                    required_fields = ['bank_details', 'payment_calculation', 'instructions']
+                    if all(field in data for field in required_fields):
+                        # Check bank details structure
+                        bank_details = data['bank_details']
+                        bank_required = ['account_number', 'account_name', 'bank_name', 'ifsc_code']
+                        if all(field in bank_details for field in bank_required):
+                            self.log_result('payment_api', 'Get bank details', True)
+                        else:
+                            self.log_result('payment_api', 'Get bank details', False, f"Missing bank detail fields: {bank_details}")
+                    else:
+                        self.log_result('payment_api', 'Get bank details', False, f"Missing required fields in response: {data}")
+                else:
+                    self.log_result('payment_api', 'Get bank details', False, f"Invalid response structure: {result}")
+            else:
+                self.log_result('payment_api', 'Get bank details', False, f"HTTP {response.status_code}: {response.text}")
+        except Exception as e:
+            self.log_result('payment_api', 'Get bank details', False, str(e))
+
+    def test_registration_to_payment_flow(self):
+        """Test complete registration to payment flow"""
+        try:
+            # Step 1: Create a registration
+            registration_data = self.create_valid_registration_data("payment_flow")
+            reg_response = requests.post(f"{self.base_url}/registrations", json=registration_data)
+            
+            if reg_response.status_code == 200:
+                reg_result = reg_response.json()
+                if reg_result.get('success') and reg_result.get('data'):
+                    registration_id = reg_result['data']['id']
+                    self.created_registrations.append(registration_id)
+                    
+                    # Step 2: Get payment info for this registration
+                    payment_response = requests.get(f"{self.base_url}/payments/info/{registration_id}")
+                    
+                    if payment_response.status_code == 200:
+                        payment_result = payment_response.json()
+                        if payment_result.get('success') and payment_result.get('data'):
+                            # Step 3: Verify bank details are accessible
+                            bank_response = requests.get(f"{self.base_url}/payments/bank-details")
+                            
+                            if bank_response.status_code == 200:
+                                bank_result = bank_response.json()
+                                if bank_result.get('success'):
+                                    self.log_result('payment_api', 'Registration to payment flow', True)
+                                else:
+                                    self.log_result('payment_api', 'Registration to payment flow', False, "Bank details not accessible")
+                            else:
+                                self.log_result('payment_api', 'Registration to payment flow', False, f"Bank details failed: HTTP {bank_response.status_code}")
+                        else:
+                            self.log_result('payment_api', 'Registration to payment flow', False, f"Payment info invalid: {payment_result}")
+                    else:
+                        self.log_result('payment_api', 'Registration to payment flow', False, f"Payment info failed: HTTP {payment_response.status_code}")
+                else:
+                    self.log_result('payment_api', 'Registration to payment flow', False, "Registration creation failed")
+            else:
+                self.log_result('payment_api', 'Registration to payment flow', False, f"Registration failed: HTTP {reg_response.status_code}")
+        except Exception as e:
+            self.log_result('payment_api', 'Registration to payment flow', False, str(e))
+
     def run_all_tests(self):
         """Run all API tests"""
         print("🚀 Starting KICON 2025 Backend API Tests...")
