@@ -27,7 +27,8 @@ class KICONAPITester:
         self.test_results = {
             'registration_api': {'passed': 0, 'failed': 0, 'errors': []},
             'contact_api': {'passed': 0, 'failed': 0, 'errors': []},
-            'static_api': {'passed': 0, 'failed': 0, 'errors': []}
+            'static_api': {'passed': 0, 'failed': 0, 'errors': []},
+            'payment_api': {'passed': 0, 'failed': 0, 'errors': []}
         }
         self.created_registrations = []
         self.created_contacts = []
