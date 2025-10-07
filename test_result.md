@@ -186,6 +186,9 @@ frontend:
       - working: "unknown"
         agent: "main"
         comment: "Gallery component updated to fetch images from backend API with fallback to static images"
+      - working: "unknown"
+        agent: "main"
+        comment: "Added new gallery images: korean-implant.jpg (already existed) and 14.jpg (Advanced Dental Chair System) to backend gallery endpoint. Updated static_data.py with new image entry."
 
 metadata:
   created_by: "main_agent"
