@@ -31,7 +31,14 @@ const AdminDashboard = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
   const [specialtyFilter, setSpecialtyFilter] = useState("all");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { toast } = useToast();
+
+  useEffect(() => {
+    // Check if already logged in
+    const loggedIn = localStorage.getItem("adminLoggedIn") === "true";
+    setIsLoggedIn(loggedIn);
+  }, []);
 
   useEffect(() => {
     fetchData();
