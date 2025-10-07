@@ -208,6 +208,12 @@ async def get_gallery_images():
                 "url": "https://customer-assets.emergentagent.com/job_korea-mice-event/artifacts/nz1es3wp_korean-implant.jpg",
                 "title": "Korean Dental Implant Technology",
                 "description": "Advanced Korean dental implant system with precision engineering for superior osseointegration and long-term stability"
+            },
+            {
+                "id": 18,
+                "url": "https://customer-assets.emergentagent.com/job_koreamed/artifacts/inn0ctmc_14.jpg",
+                "title": "Advanced Dental Chair System",
+                "description": "State-of-the-art Korean dental chair with integrated imaging system and ergonomic design for comprehensive dental treatments"
             }
         ]
         
