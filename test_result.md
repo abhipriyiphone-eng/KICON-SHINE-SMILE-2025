@@ -213,9 +213,9 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Registration API endpoints"
+    - "Registration to Payment Flow"
     - "Multi-step registration form"
-    - "Contact form API"
+    - "Gallery with medical images"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
