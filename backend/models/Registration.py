@@ -67,10 +67,17 @@ class RegistrationCreate(BaseModel):
 
     @validator('dateOfBirth')
     def validate_age(cls, v):
-        if v > datetime.now():
+        from datetime import timezone
+        now = datetime.now(timezone.utc)
+        
+        # Make v timezone aware if it isn't
+        if v.tzinfo is None:
+            v = v.replace(tzinfo=timezone.utc)
+            
+        if v > now:
             raise ValueError('Date of birth cannot be in the future')
         
-        age = (datetime.now() - v).days / 365.25
+        age = (now - v).days / 365.25
         if age < 18:
             raise ValueError('Registrant must be at least 18 years old')
         
@@ -78,12 +85,19 @@ class RegistrationCreate(BaseModel):
 
     @validator('passportExpiry')
     def validate_passport_expiry(cls, v):
-        if v <= datetime.now():
+        from datetime import timezone
+        now = datetime.now(timezone.utc)
+        
+        # Make v timezone aware if it isn't
+        if v.tzinfo is None:
+            v = v.replace(tzinfo=timezone.utc)
+            
+        if v <= now:
             raise ValueError('Passport must be valid (not expired)')
         
         # Passport should be valid for at least 6 months after the event
-        event_date = datetime(2025, 11, 27)  # Last day of event
-        min_expiry = datetime(2026, 5, 27)   # 6 months after event
+        event_date = datetime(2025, 11, 27, tzinfo=timezone.utc)  # Last day of event
+        min_expiry = datetime(2026, 5, 27, tzinfo=timezone.utc)   # 6 months after event
         
         if v < min_expiry:
             raise ValueError('Passport must be valid for at least 6 months after the event end date')
