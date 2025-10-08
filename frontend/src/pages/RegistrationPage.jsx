@@ -255,24 +255,12 @@ const RegistrationPage = () => {
   };
 
   const nextStep = () => {
-    let isValid = false;
+    // Temporary: Remove validation to test step progression
+    alert(`Current Step: ${currentStep}, moving to step ${currentStep + 1}`);
     
-    switch (currentStep) {
-      case 1:
-        isValid = validateStep1();
-        break;
-      case 2:
-        isValid = validateStep2();
-        break;
-      case 3:
-        isValid = validateStep3();
-        break;
-      default:
-        isValid = true;
-    }
-    
-    if (isValid && currentStep < 4) {
+    if (currentStep < 4) {
       setCurrentStep(currentStep + 1);
+      alert(`Step updated to: ${currentStep + 1}`);
     }
   };
 
