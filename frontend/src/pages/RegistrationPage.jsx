@@ -693,13 +693,16 @@ const RegistrationPage = () => {
                   
                   <div className="ml-auto">
                     {currentStep < 4 ? (
-                      <Button
+                      <button
                         type="button"
-                        onClick={nextStep}
-                        className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 px-6"
+                        onClick={() => {
+                          console.log('Button clicked! Current step:', currentStep);
+                          nextStep();
+                        }}
+                        className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 px-6 py-2 rounded text-white font-medium"
                       >
                         Next Step
-                      </Button>
+                      </button>
                     ) : (
                       <Button
                         type="submit"
