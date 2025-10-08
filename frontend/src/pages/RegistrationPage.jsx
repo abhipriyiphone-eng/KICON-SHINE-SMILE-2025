@@ -256,9 +256,7 @@ const RegistrationPage = () => {
 
   const nextStep = () => {
     if (currentStep < 4) {
-      const nextStepNumber = currentStep + 1;
-      setCurrentStep(nextStepNumber);
-      alert(`Step updated from ${currentStep} to ${nextStepNumber}`);
+      setCurrentStep(currentStep + 1);
     }
   };
 
