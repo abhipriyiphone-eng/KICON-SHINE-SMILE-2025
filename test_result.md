@@ -215,7 +215,7 @@ frontend:
     implemented: true
     working: false
     file: "pages/RegistrationPage.jsx, components/PaymentDetails.jsx"
-    stuck_count: 1
+    stuck_count: 2
     priority: "high"
     needs_retesting: false
     status_history:
@@ -225,6 +225,9 @@ frontend:
       - working: false
         agent: "testing"
         comment: "REGISTRATION TO PAYMENT FLOW BLOCKED: Cannot test PaymentDetails modal because registration form submission is blocked. Issues identified: 1) Form fields in Steps 2-4 not accessible via standard selectors (IDs not matching or elements not rendered), 2) Submit button in Step 4 not visible, preventing form submission, 3) Required field validation appears to be preventing progression to final submission, 4) PaymentDetails component code exists and looks correct, but cannot be tested due to form submission blockage. Backend APIs working correctly. User's reported issue confirmed - form submission is indeed not working."
+      - working: false
+        agent: "testing"
+        comment: "REGISTRATION TO PAYMENT FLOW STILL BLOCKED: Cannot test complete flow due to Step 1 validation issue. ANALYSIS: ✅ PaymentDetails component code is correctly implemented with proper API integration, ✅ Backend registration API working (confirmed via previous tests), ✅ Backend payment APIs working (bank details, payment calculation), ❌ BLOCKING ISSUE: Registration form stuck at Step 1 validation, preventing access to Steps 2-4 and final submission. The validateStep1() function is failing despite all required fields being properly filled. Root cause appears to be in the validation logic, not the PaymentDetails component or backend integration. User's issue confirmed - registration cannot be completed due to Step 1 validation failure."
 
   - task: "Gallery with medical images"
     implemented: true
