@@ -706,18 +706,18 @@ const RegistrationPage = () => {
                         Next Step
                       </button>
                     ) : (
-                      <Button
+                      <button
                         type="submit"
                         disabled={!formData.termsAccepted || emailExists || emailChecking || submitting}
-                        className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 px-8"
+                        className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 px-8 py-2 rounded text-white font-medium disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         {submitting ? (
                           <>
-                            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2 inline-block"></div>
                             Submitting...
                           </>
                         ) : emailChecking ? "Checking Email..." : "Complete Registration"}
-                      </Button>
+                      </button>
                     )}
                   </div>
                 </div>
