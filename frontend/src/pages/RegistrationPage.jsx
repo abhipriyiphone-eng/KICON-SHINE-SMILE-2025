@@ -178,19 +178,10 @@ const RegistrationPage = () => {
   const validateStep1 = () => {
     const required = ['fullName', 'gender', 'dateOfBirth', 'nationality', 'passportNumber', 'passportExpiry', 'mobile', 'email'];
     
-    // Temporary debugging - show current form data
-    const debugData = Object.keys(formData).reduce((acc, key) => {
-      acc[key] = formData[key] || 'EMPTY';
-      return acc;
-    }, {});
-    
-    alert(`Debug - Form Data: ${JSON.stringify(debugData, null, 2)}`);
-    
     for (const field of required) {
       const value = formData[field];
       
       if (!value || (typeof value === 'string' && value.trim() === '')) {
-        alert(`Validation failed for field: ${field}, value: ${value}`);
         toast({
           title: "Validation Error",
           description: `Please fill in ${field.replace(/([A-Z])/g, ' $1').toLowerCase()}`,
@@ -201,7 +192,6 @@ const RegistrationPage = () => {
     }
     
     if (emailExists) {
-      alert('Email exists error');
       toast({
         title: "Email Error", 
         description: "Please use a different email address",
@@ -210,7 +200,6 @@ const RegistrationPage = () => {
       return false;
     }
     
-    alert('Step 1 validation passed!');
     return true;
   };
 
