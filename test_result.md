@@ -192,11 +192,11 @@ frontend:
 
   - task: "Multi-step registration form"
     implemented: true
-    working: "unknown"
+    working: false
     file: "pages/RegistrationPage.jsx"
-    stuck_count: 0
+    stuck_count: 1
     priority: "high"  
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "unknown"
         agent: "main"
@@ -204,18 +204,24 @@ frontend:
       - working: "unknown"
         agent: "main"
         comment: "Registration form appears to be working. PaymentDetails component should display after successful registration submission. Need to test full registration-to-payment flow."
+      - working: false
+        agent: "testing"
+        comment: "CRITICAL ISSUE FOUND: Registration form has multiple blocking problems: 1) Form navigation works through Steps 1-4 correctly, 2) Step 1 (Personal Info) fills successfully with email validation working, 3) Step 2 (Professional) - required fields like #yearsOfPractice, #clinicName, #clinicAddress not being found by selectors, 4) Step 3 (Preferences) - #emergencyContact field not consistently found, 5) Step 4 (Payment & Terms) - Submit button not visible even when reaching final step, likely due to missing required field validations from previous steps. Form structure exists but field accessibility and validation logic preventing successful submission. Backend API working correctly (email validation calls successful)."
 
   - task: "Registration to Payment Flow"
     implemented: true
-    working: "unknown"
+    working: false
     file: "pages/RegistrationPage.jsx, components/PaymentDetails.jsx"
-    stuck_count: 0
+    stuck_count: 1
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "unknown"
         agent: "main"
         comment: "User reported issue: 'after registration when we submit the form its not leading to the payment page'. Backend registration API was fixed (datetime error). PaymentDetails component exists and should show after registration. Need to test complete flow."
+      - working: false
+        agent: "testing"
+        comment: "REGISTRATION TO PAYMENT FLOW BLOCKED: Cannot test PaymentDetails modal because registration form submission is blocked. Issues identified: 1) Form fields in Steps 2-4 not accessible via standard selectors (IDs not matching or elements not rendered), 2) Submit button in Step 4 not visible, preventing form submission, 3) Required field validation appears to be preventing progression to final submission, 4) PaymentDetails component code exists and looks correct, but cannot be tested due to form submission blockage. Backend APIs working correctly. User's reported issue confirmed - form submission is indeed not working."
 
   - task: "Gallery with medical images"
     implemented: true
