@@ -177,8 +177,15 @@ const RegistrationPage = () => {
   // Validation functions for each step
   const validateStep1 = () => {
     const required = ['fullName', 'gender', 'dateOfBirth', 'nationality', 'passportNumber', 'passportExpiry', 'mobile', 'email'];
+    
+    console.log('Validating Step 1 - Current formData:', formData);
+    
     for (const field of required) {
-      if (!formData[field] || formData[field].trim() === '') {
+      const value = formData[field];
+      console.log(`Checking field ${field}:`, value, typeof value);
+      
+      if (!value || (typeof value === 'string' && value.trim() === '')) {
+        console.log(`Validation failed for field: ${field}`);
         toast({
           title: "Validation Error",
           description: `Please fill in ${field.replace(/([A-Z])/g, ' $1').toLowerCase()}`,
@@ -189,6 +196,7 @@ const RegistrationPage = () => {
     }
     
     if (emailExists) {
+      console.log('Email exists error');
       toast({
         title: "Email Error", 
         description: "Please use a different email address",
@@ -197,6 +205,7 @@ const RegistrationPage = () => {
       return false;
     }
     
+    console.log('Step 1 validation passed!');
     return true;
   };
 
