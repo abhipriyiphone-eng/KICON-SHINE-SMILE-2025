@@ -174,8 +174,90 @@ const RegistrationPage = () => {
     navigate("/");
   };
 
+  // Validation functions for each step
+  const validateStep1 = () => {
+    const required = ['fullName', 'gender', 'dateOfBirth', 'nationality', 'passportNumber', 'passportExpiry', 'mobile', 'email'];
+    for (const field of required) {
+      if (!formData[field] || formData[field].trim() === '') {
+        toast({
+          title: "Validation Error",
+          description: `Please fill in ${field.replace(/([A-Z])/g, ' $1').toLowerCase()}`,
+          variant: "destructive"
+        });
+        return false;
+      }
+    }
+    
+    if (emailExists) {
+      toast({
+        title: "Email Error", 
+        description: "Please use a different email address",
+        variant: "destructive"
+      });
+      return false;
+    }
+    
+    return true;
+  };
+
+  const validateStep2 = () => {
+    const required = ['specialty', 'yearsOfPractice', 'clinicName', 'clinicAddress', 'designation'];
+    for (const field of required) {
+      if (!formData[field] || formData[field].toString().trim() === '') {
+        toast({
+          title: "Validation Error",
+          description: `Please fill in ${field.replace(/([A-Z])/g, ' $1').toLowerCase()}`,
+          variant: "destructive"
+        });
+        return false;
+      }
+    }
+    
+    if (formData.interests.length === 0) {
+      toast({
+        title: "Validation Error",
+        description: "Please select at least one area of interest",
+        variant: "destructive"
+      });
+      return false;
+    }
+    
+    return true;
+  };
+
+  const validateStep3 = () => {
+    const required = ['foodPreference', 'emergencyContact'];
+    for (const field of required) {
+      if (!formData[field] || formData[field].trim() === '') {
+        toast({
+          title: "Validation Error",
+          description: `Please fill in ${field.replace(/([A-Z])/g, ' $1').toLowerCase()}`,
+          variant: "destructive"
+        });
+        return false;
+      }
+    }
+    return true;
+  };
+
   const nextStep = () => {
-    if (currentStep < 4) {
+    let isValid = false;
+    
+    switch (currentStep) {
+      case 1:
+        isValid = validateStep1();
+        break;
+      case 2:
+        isValid = validateStep2();
+        break;
+      case 3:
+        isValid = validateStep3();
+        break;
+      default:
+        isValid = true;
+    }
+    
+    if (isValid && currentStep < 4) {
       setCurrentStep(currentStep + 1);
     }
   };
