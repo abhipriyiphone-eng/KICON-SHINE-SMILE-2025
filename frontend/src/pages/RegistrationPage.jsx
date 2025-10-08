@@ -665,17 +665,19 @@ const RegistrationPage = () => {
                     </div>
 
                     <div className="flex items-start space-x-2">
-                      <Checkbox
+                      <input
+                        type="checkbox"
                         id="terms"
                         checked={formData.termsAccepted}
-                        onCheckedChange={(checked) => handleInputChange('termsAccepted', checked)}
-                        className="mt-1"
+                        onChange={(e) => handleInputChange('termsAccepted', e.target.checked)}
+                        className="mt-1 h-4 w-4 text-emerald-600 focus:ring-emerald-500 border-gray-300 rounded"
+                        required
                       />
-                      <Label htmlFor="terms" className="text-sm text-gray-700 leading-relaxed">
+                      <label htmlFor="terms" className="text-sm text-gray-700 leading-relaxed">
                         I agree to the terms and conditions, cancellation policy, and understand that this registration 
                         is subject to visa approval. I acknowledge that the organizers are not responsible for visa 
                         rejections or delays beyond their control.
-                      </Label>
+                      </label>
                     </div>
                   </div>
                 )}
