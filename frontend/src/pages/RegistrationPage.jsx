@@ -252,17 +252,16 @@ const RegistrationPage = () => {
 
   const nextStep = () => {
     console.log('nextStep called! Current step:', currentStep);
-    // Temporarily disable validation to allow users to test the full registration flow
-    if (currentStep < 4) {
-      const newStep = currentStep + 1;
-      console.log('Setting step to:', newStep);
-      setCurrentStep(newStep);
-      // Force re-render by using callback form
-      setCurrentStep(prevStep => {
-        console.log('State callback - previous:', prevStep, 'new:', prevStep + 1);
-        return prevStep < 4 ? prevStep + 1 : prevStep;
-      });
-    }
+    
+    setCurrentStep(prevStep => {
+      if (prevStep < 4) {
+        const newStep = prevStep + 1;
+        console.log('Moving from step', prevStep, 'to step', newStep);
+        return newStep;
+      }
+      console.log('Already at max step:', prevStep);
+      return prevStep;
+    });
   };
 
   const prevStep = () => {
