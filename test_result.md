@@ -246,10 +246,12 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Registration to Payment Flow"
     - "Multi-step registration form"
+    - "Registration to Payment Flow"
     - "Gallery with medical images"
-  stuck_tasks: []
+  stuck_tasks: 
+    - "Multi-step registration form"
+    - "Registration to Payment Flow"
   test_all: false
   test_priority: "high_first"
 
