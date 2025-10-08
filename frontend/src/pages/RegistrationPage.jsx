@@ -255,12 +255,10 @@ const RegistrationPage = () => {
   };
 
   const nextStep = () => {
-    // Temporary: Remove validation to test step progression
-    alert(`Current Step: ${currentStep}, moving to step ${currentStep + 1}`);
-    
     if (currentStep < 4) {
-      setCurrentStep(currentStep + 1);
-      alert(`Step updated to: ${currentStep + 1}`);
+      const nextStepNumber = currentStep + 1;
+      setCurrentStep(nextStepNumber);
+      alert(`Step updated from ${currentStep} to ${nextStepNumber}`);
     }
   };
 
