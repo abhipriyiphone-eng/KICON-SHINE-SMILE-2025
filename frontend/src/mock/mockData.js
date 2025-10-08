@@ -69,8 +69,26 @@ export const contactInfo = {
 };
 
 export const registrationFormData = {
-  specialties: ["Dermatology", "Dentistry", "Cosmetology", "Other"],
-  interests: ["Dental Equipment", "Skincare Devices", "Cosmetic Products"],
+  specialties: [
+    "Dermatology", 
+    "Dentistry", 
+    "Cosmetology", 
+    "Plastic Surgery",
+    "Aesthetic Medicine",
+    "General Practice",
+    "Other"
+  ],
+  interests: [
+    "Dental Equipment", 
+    "Skincare Devices", 
+    "Cosmetic Products",
+    "Aesthetic Threads",
+    "Korean Implants",
+    "Hi-tech Dental Chairs",
+    "NMN/NAD+ Products",
+    "Anti-wrinkle Treatments",
+    "Medical Technology"
+  ],
   foodOptions: ["Vegetarian", "Non-Vegetarian", "Both"],
   countries: ["India", "Other"]
 };
