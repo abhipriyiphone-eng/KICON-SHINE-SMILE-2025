@@ -251,9 +251,17 @@ const RegistrationPage = () => {
   };
 
   const nextStep = () => {
+    console.log('nextStep called! Current step:', currentStep);
     // Temporarily disable validation to allow users to test the full registration flow
     if (currentStep < 4) {
-      setCurrentStep(currentStep + 1);
+      const newStep = currentStep + 1;
+      console.log('Setting step to:', newStep);
+      setCurrentStep(newStep);
+      // Force re-render by using callback form
+      setCurrentStep(prevStep => {
+        console.log('State callback - previous:', prevStep, 'new:', prevStep + 1);
+        return prevStep < 4 ? prevStep + 1 : prevStep;
+      });
     }
   };
 
