@@ -194,7 +194,7 @@ frontend:
     implemented: true
     working: false
     file: "pages/RegistrationPage.jsx"
-    stuck_count: 2
+    stuck_count: 3
     priority: "high"  
     needs_retesting: false
     status_history:
@@ -210,6 +210,9 @@ frontend:
       - working: false
         agent: "testing"
         comment: "COMPREHENSIVE TESTING COMPLETED: Registration form validation is blocking progression from Step 1 to Step 2. FINDINGS: ✅ Form loads correctly with proper step indicators, ✅ All form fields are accessible and can be filled (Full Name, Date of Birth, Nationality, Passport Number, Passport Expiry, Mobile, Email), ✅ Gender dropdown now works correctly (shows 'Male' when selected), ✅ Email validation API calls working properly, ❌ CRITICAL ISSUE: Step 1 validation preventing progression to Step 2 despite all required fields being filled. The validateStep1() function appears to be failing even when all fields contain valid data. This suggests an issue with the validation logic itself, not the form fields. Backend APIs confirmed working. User's reported issue confirmed - registration form submission is blocked at Step 1 validation."
+      - working: false
+        agent: "testing"
+        comment: "ROOT CAUSE IDENTIFIED & PARTIAL FIX ATTEMPTED: Found the exact issue - the nextStep() function (lines 257-261) was not calling validation before step progression. Applied fix to call validateStep1(), validateStep2(), validateStep3() before allowing step progression. However, after restarting frontend service, the validation is still failing. COMPREHENSIVE TESTING RESULTS: ✅ Form loads and renders correctly, ✅ All Step 1 fields can be filled successfully (Full Name: 'Dr. Rajesh Kumar Sharma', Gender: 'Male', DOB: '1985-03-15', Nationality: 'India', Passport: 'M1234567', Passport Expiry: '2026-06-15', Mobile: '+91-9876543210', Email: unique timestamp email), ✅ Email validation API working, ✅ Next Step button present and clickable, ❌ CRITICAL: Step 1 to Step 2 navigation still blocked despite all fields being filled correctly. The validation logic fix was applied but validation is still failing. Need deeper investigation into validateStep1() function logic or potential React state synchronization issues. User's reported issue CONFIRMED and PARTIALLY DIAGNOSED but NOT YET RESOLVED."
 
   - task: "Registration to Payment Flow"
     implemented: true
