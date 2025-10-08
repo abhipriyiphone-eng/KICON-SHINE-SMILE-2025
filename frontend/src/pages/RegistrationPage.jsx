@@ -356,16 +356,18 @@ const RegistrationPage = () => {
                       
                       <div>
                         <Label htmlFor="gender" className="text-sm font-medium text-gray-700">Gender *</Label>
-                        <Select value={formData.gender} onValueChange={(value) => handleInputChange('gender', value)}>
-                          <SelectTrigger className="mt-1">
-                            <SelectValue placeholder="Select gender" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="male">Male</SelectItem>
-                            <SelectItem value="female">Female</SelectItem>
-                            <SelectItem value="other">Other</SelectItem>
-                          </SelectContent>
-                        </Select>
+                        <select 
+                          id="gender"
+                          value={formData.gender}
+                          onChange={(e) => handleInputChange('gender', e.target.value)}
+                          className="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                          required
+                        >
+                          <option value="">Select gender</option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                          <option value="other">Other</option>
+                        </select>
                       </div>
 
                       <div>
