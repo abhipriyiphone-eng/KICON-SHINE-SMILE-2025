@@ -251,25 +251,8 @@ const RegistrationPage = () => {
   };
 
   const nextStep = () => {
-    let isValid = false;
-    
-    // Validate current step before proceeding
-    switch (currentStep) {
-      case 1:
-        isValid = validateStep1();
-        break;
-      case 2:
-        isValid = validateStep2();
-        break;
-      case 3:
-        isValid = validateStep3();
-        break;
-      default:
-        isValid = true;
-    }
-    
-    // Only proceed to next step if validation passes
-    if (isValid && currentStep < 4) {
+    // Temporarily disable validation to allow users to test the full registration flow
+    if (currentStep < 4) {
       setCurrentStep(currentStep + 1);
     }
   };
