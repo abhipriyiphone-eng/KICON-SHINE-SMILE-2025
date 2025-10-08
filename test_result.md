@@ -194,7 +194,7 @@ frontend:
     implemented: true
     working: false
     file: "pages/RegistrationPage.jsx"
-    stuck_count: 1
+    stuck_count: 2
     priority: "high"  
     needs_retesting: false
     status_history:
@@ -207,6 +207,9 @@ frontend:
       - working: false
         agent: "testing"
         comment: "CRITICAL ISSUE FOUND: Registration form has multiple blocking problems: 1) Form navigation works through Steps 1-4 correctly, 2) Step 1 (Personal Info) fills successfully with email validation working, 3) Step 2 (Professional) - required fields like #yearsOfPractice, #clinicName, #clinicAddress not being found by selectors, 4) Step 3 (Preferences) - #emergencyContact field not consistently found, 5) Step 4 (Payment & Terms) - Submit button not visible even when reaching final step, likely due to missing required field validations from previous steps. Form structure exists but field accessibility and validation logic preventing successful submission. Backend API working correctly (email validation calls successful)."
+      - working: false
+        agent: "testing"
+        comment: "COMPREHENSIVE TESTING COMPLETED: Registration form validation is blocking progression from Step 1 to Step 2. FINDINGS: ✅ Form loads correctly with proper step indicators, ✅ All form fields are accessible and can be filled (Full Name, Date of Birth, Nationality, Passport Number, Passport Expiry, Mobile, Email), ✅ Gender dropdown now works correctly (shows 'Male' when selected), ✅ Email validation API calls working properly, ❌ CRITICAL ISSUE: Step 1 validation preventing progression to Step 2 despite all required fields being filled. The validateStep1() function appears to be failing even when all fields contain valid data. This suggests an issue with the validation logic itself, not the form fields. Backend APIs confirmed working. User's reported issue confirmed - registration form submission is blocked at Step 1 validation."
 
   - task: "Registration to Payment Flow"
     implemented: true
